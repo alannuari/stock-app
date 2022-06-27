@@ -42,15 +42,15 @@ if (isset($_POST['login'])) {
     </head>
     <body>
         <div id="layoutAuthentication">
-            <div id="layoutAuthentication_content" class="d-grid align-items-center">
+            <div id="layoutAuthentication_content">
                 <main>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <h1 class="font-weight-light text-center mb-5">Aplikasi Stok Barang</h1>
+                            <h1 class="font-weight-light text-center my-5">Aplikasi Stok Barang</h1>
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg">
-                                    <div class="card-header">
-                                        <h3 class="text-center font-weight-light my-3">Login</h3>
+                                    <div class="card-header bg-dark">
+                                        <h3 class="text-center font-weight-light text-white my-3">Login</h3>
                                     </div>
                                     <div class="card-body">
                                         <form method="POST">
@@ -63,7 +63,7 @@ if (isset($_POST['login'])) {
                                                 <label for="inputPassword">Password</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <button class="btn btn-primary" name="login">Login</button>
+                                                <button class="btn btn-dark" name="login">Login</button>
                                             </div>
                                         </form>
                                     </div>
