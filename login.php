@@ -68,6 +68,10 @@ if (isset($_POST['login'])) {
                                         </form>
                                     </div>
                                 </div>
+                                <div>
+                                    <p class="mb-0">Email : admin@gmail.com</p>
+                                    <p class="mb-0">Password : admin</p>
+                                </div>
                             </div>
                         </div>
                     </div>
