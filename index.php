@@ -33,11 +33,11 @@ require 'get_stok_barang.php';
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-sm-4">
                         <h1 class="my-4">Stok Barang</h1>
                         <div class="card mb-4">
-                            <div class="card-header d-flex justify-content-between align-items-center">
-                                <div>
+                            <div class="card-header d-flex justify-content-between align-items-sm-center flex-column flex-sm-row">
+                                <div class="py-2">
                                     <i class="fas fa-table me-1"></i>
                                     Data Stok Barang
                                 </div>
@@ -75,10 +75,10 @@ require 'get_stok_barang.php';
                                                 <td><?php echo $item['stock']; ?></td>
                                                 <td><?php echo $item['deskripsi']; ?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?php echo $item['idbarang']; ?>">
+                                                    <button type="button" class="btn btn-warning mb-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $item['idbarang']; ?>">
                                                         Edit
                                                     </button>
-                                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $item['idbarang']; ?>">
+                                                    <button type="button" class="btn btn-danger mb-1" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $item['idbarang']; ?>">
                                                         Hapus
                                                     </button>
                                                 </td>
