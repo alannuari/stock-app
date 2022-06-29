@@ -35,7 +35,7 @@ if ($stok_sebelum_update >= 0) {
 } else {
     echo "
         <script>
-            alert('Maaf data tidak bisa dihapus karena akan menyebabkan stok menjadi minus!');
+            alert('Maaf data tidak bisa diedit karena akan menyebabkan stok menjadi minus!');
             window.location.href='barang_masuk.php';
         </script>
     ";
