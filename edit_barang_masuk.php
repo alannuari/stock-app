@@ -17,17 +17,28 @@ $result_data_masuk = mysqli_query($conn, $sql_barang_masuk);
 $data_masuk_sekarang = mysqli_fetch_array($result_data_masuk);
 $masuk_sekarang = $data_masuk_sekarang['qty'];
 
-$perubahan = $stok_sekarang - $masuk_sekarang + $qty;
-$sql_perubahan_stok = "UPDATE stock SET stock='$perubahan' WHERE idbarang='$idbarang'";
-$perubahan_stok = mysqli_query($conn, $sql_perubahan_stok);
+$stok_sebelum_update = $stok_sekarang - $masuk_sekarang;
 
-$sql_edit_masuk = "UPDATE masuk SET qty='$qty', penerima='$penerima' WHERE idmasuk='$idmasuk'";
-$edit_masuk = mysqli_query($conn, $sql_edit_masuk);
+if ($stok_sebelum_update >= 0) {
+    $update_stok = $stok_sebelum_update + $qty;
+    $sql_perubahan_stok = "UPDATE stock SET stock='$update_stok' WHERE idbarang='$idbarang'";
+    $perubahan_stok = mysqli_query($conn, $sql_perubahan_stok);
 
-mysqli_free_result($result_data_stok);
-mysqli_free_result($result_data_masuk);
-mysqli_close($conn);
+    $sql_edit_masuk = "UPDATE masuk SET qty='$qty', penerima='$penerima' WHERE idmasuk='$idmasuk'";
+    $edit_masuk = mysqli_query($conn, $sql_edit_masuk);
 
-header('Location: barang_masuk.php');
+    mysqli_free_result($result_data_stok);
+    mysqli_free_result($result_data_masuk);
+    mysqli_close($conn);
+
+    header('Location: barang_masuk.php');
+} else {
+    echo "
+        <script>
+            alert('Maaf data tidak bisa dihapus karena akan menyebabkan stok menjadi minus!');
+            window.location.href='barang_masuk.php';
+        </script>
+    ";
+}
 
 ?>
