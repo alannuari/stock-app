@@ -48,7 +48,7 @@ require 'get_barang_masuk.php';
                                 </button>
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple">
+                                <table id="datatablesSimple" class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th>No</th>

@@ -54,7 +54,7 @@ require 'get_stok_barang.php';
                                     <?php endif ?>
                             <?php endforeach ?>
                             <div class="card-body">
-                                <table id="datatablesSimple">
+                                <table id="datatablesSimple" class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th>No</th>
