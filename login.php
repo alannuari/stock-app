@@ -72,6 +72,11 @@ if (isset($_POST['login'])) {
                         </div>
                     </div>
                 </main>
+                <div class="mx-auto mt-5" style="max-width: 600px">
+                    <p class="text-center py-2 mx-2 mb-0 bg-light">
+                        Informasi login ada di link repository
+                    </p>
+                </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
