@@ -70,7 +70,7 @@ require 'get_stok_barang.php';
                                             <tr>
                                                 <td><?php echo $i; ?></td>
                                                 <td>
-                                                    <a href="detail_barang.php?id=<?php echo $item['idbarang']; ?>" class="fw-bold text-black text-decoration-none""><?php echo $item['namabarang']; ?></a>
+                                                    OKE
                                                 </td>
                                                 <td><?php echo $item['stock']; ?></td>
                                                 <td><?php echo $item['deskripsi']; ?></td>
@@ -81,7 +81,11 @@ require 'get_stok_barang.php';
                                                     <button type="button" class="btn btn-danger mb-1" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $item['idbarang']; ?>">
                                                         Hapus
                                                     </button>
-                                                </td>
+                                                    <a href="detail_barang.php?id=<?php echo $item['idbarang']; ?>">
+                                                        <button type="button" class="btn btn-secondary mb-1">
+                                                            Detail
+                                                        </button>
+                                                    </a>
                                             </tr>
 
                                             <?php $i++; ?>
@@ -162,7 +166,9 @@ require 'get_stok_barang.php';
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script> -->
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
         <script src="js/datatables-simple-demo.js"></script>
     </body>
 </html>
