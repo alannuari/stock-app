@@ -5,7 +5,7 @@ require 'config/db_connect.php';
 session_start();
 
 if (isset($_SESSION['login'])) {
-    header('Location: index.php');
+    header('Location: home.php');
     exit;
 }
 
@@ -20,9 +20,14 @@ if (isset($_POST['login'])) {
     if (mysqli_num_rows($cek_user) > 0) {
         $_SESSION['login'] = true;
         $_SESSION['email'] = $email;
-        header('Location: index.php');
+        header('Location: home.php');
     } else {
-        header('Location: login.php');
+        echo "
+            <script>
+                alert('Email atau password salah!');
+                window.location.href='login.php';
+            </script>
+        ";
     }
 }
 
@@ -46,11 +51,11 @@ if (isset($_POST['login'])) {
                 <main>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <h1 class="font-weight-light text-center my-5">Aplikasi Stok Barang</h1>
+                            <h1 class="font-weight-light text-center my-5">Login</h1>
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg">
                                     <div class="card-header bg-dark">
-                                        <h3 class="text-center font-weight-light text-white my-3">Login</h3>
+                                        <h3 class="text-center font-weight-light text-white my-3">Stock App</h3>
                                     </div>
                                     <div class="card-body">
                                         <form method="POST">
@@ -72,7 +77,7 @@ if (isset($_POST['login'])) {
                         </div>
                     </div>
                 </main>
-                <div class="mx-auto mt-5" style="max-width: 600px">
+                <div class="mx-auto mt-5" style="max-width: 600px" id="close">
                     <p class="text-center py-2 mx-2 mb-0 bg-light">
                         Informasi login ada di link repository
                     </p>
