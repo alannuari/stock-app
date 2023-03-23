@@ -11,6 +11,6 @@ $addtotable = mysqli_query($conn, $sql);
 
 mysqli_close($conn);
 
-header('Location: index.php');
+header('Location: home.php');
 
 ?>
