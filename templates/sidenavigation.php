@@ -3,7 +3,7 @@
         <div class="sb-sidenav-menu">
             <div class="nav mt-3">
                 <a class="nav-link" href="index.php">
-                    <div class="sb-nav-link-icon <?php echo strpos($_SERVER['REQUEST_URI'], 'index') ? 'text-primary' : ''; ?>"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="sb-nav-link-icon <?php echo strpos($_SERVER['REQUEST_URI'], 'home') ? 'text-primary' : ''; ?>"><i class="fa-solid fa-layer-group"></i></div>
                     Stok Barang
                 </a>
                 <a class="nav-link" href="barang_masuk.php">
