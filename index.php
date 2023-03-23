@@ -69,9 +69,7 @@ require 'get_stok_barang.php';
                                         <?php foreach($data_stok_barang as $item): ?>
                                             <tr>
                                                 <td><?php echo $i; ?></td>
-                                                <td>
-                                                    OKE
-                                                </td>
+                                                <td><?php echo $item['namabarang']; ?></td>
                                                 <td><?php echo $item['stock']; ?></td>
                                                 <td><?php echo $item['deskripsi']; ?></td>
                                                 <td>
