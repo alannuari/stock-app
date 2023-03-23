@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="d-flex justify-content-center align-items-center flex-column" style="height: 100vh">
-        <h1>Selamat Datang di Aplikasi Stok Barang (Stock App)</h1>
+        <h1 class="text-center">Selamat Datang di Aplikasi Stok Barang (Stock App)</h1>
         <a href="login.php" class="d-block mt-5 bg-info px-4 text-black py-2 text-decoration-none rounded-pill text-bold fw-bold">Login here</a>
     </div>
 </body>
