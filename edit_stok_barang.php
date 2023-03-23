@@ -11,6 +11,6 @@ $edit_barang = mysqli_query($conn, $sql_edit);
 
 mysqli_close($conn);
 
-header('Location: index.php');
+header('Location: home.php');
 
 ?>
