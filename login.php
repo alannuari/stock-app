@@ -51,7 +51,7 @@ if (isset($_POST['login'])) {
                 <main>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <h1 class="font-weight-light text-center my-5">Login</h1>
+                            <h1 class="font-weight-light text-info text-center my-5">Login</h1>
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg">
                                     <div class="card-header bg-dark">
@@ -77,7 +77,7 @@ if (isset($_POST['login'])) {
                         </div>
                     </div>
                 </main>
-                <div class="mx-auto mt-5" style="max-width: 600px" id="close">
+                <div class="mx-auto mt-5" style="max-width: 600px">
                     <p class="text-center py-2 mx-2 mb-0 bg-light">
                         Informasi login ada di link repository
                     </p>
